@@ -13,7 +13,7 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var homeLabel: UILabel!
+    @IBOutlet weak var homeScreenLabel: UILabel!
     
     var matchingItems: [MKMapItem] = [MKMapItem]()
     private var locationManager: CLLocationManager = {
