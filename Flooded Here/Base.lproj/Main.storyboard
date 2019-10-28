@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flooded_Here" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AeC-nK-4kc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nj9-WJ-dPM" customClass="GradientView" customModule="Flooded_Here" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flooded Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEu-zh-UMz">
+                                        <rect key="frame" x="141" y="16" width="133" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="ApQ-Dt-a7e"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-Eu-hJB" customClass="SearchView" customModule="Flooded_Here" customModuleProvider="target">
+                                <rect key="frame" x="20" y="50" width="374" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="trD-Uz-Hf2">
+                                        <rect key="frame" x="25" y="5" width="324" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="uq7-La-gp6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="trD-Uz-Hf2" secondAttribute="trailing" constant="25" id="9I5-zT-gJu"/>
+                                    <constraint firstItem="trD-Uz-Hf2" firstAttribute="leading" secondItem="dbV-Eu-hJB" secondAttribute="leading" constant="25" id="AmH-JM-MLo"/>
+                                    <constraint firstAttribute="height" constant="50" id="bPF-Vc-0t0"/>
+                                    <constraint firstItem="trD-Uz-Hf2" firstAttribute="top" secondItem="dbV-Eu-hJB" secondAttribute="top" constant="5" id="xbS-zB-9nH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alY-cn-vti" customClass="RoundedShadowButton" customModule="Flooded_Here" customModuleProvider="target">
+                                <rect key="frame" x="20" y="662" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="O5i-IK-d79"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Add Flood">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AeC-nK-4kc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2l5-aj-PBl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="alY-cn-vti" secondAttribute="bottom" constant="24" id="Gc4-FP-eU2"/>
+                            <constraint firstItem="nj9-WJ-dPM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kc5-5T-ITe"/>
+                            <constraint firstItem="AeC-nK-4kc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MFo-Yy-Pb1"/>
+                            <constraint firstItem="nj9-WJ-dPM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MTh-6j-gZq"/>
+                            <constraint firstItem="AeC-nK-4kc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QdP-hS-DhV"/>
+                            <constraint firstItem="dbV-Eu-hJB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="QsA-c3-b9u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="alY-cn-vti" secondAttribute="trailing" constant="20" id="RA5-P9-cVd"/>
+                            <constraint firstItem="AeC-nK-4kc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SCb-DA-SYY"/>
+                            <constraint firstItem="dbV-Eu-hJB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SnM-nt-fLb"/>
+                            <constraint firstItem="nj9-WJ-dPM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZoD-RA-KHS"/>
+                            <constraint firstItem="alY-cn-vti" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j95-kD-4sU"/>
+                            <constraint firstItem="alY-cn-vti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pJH-cz-JWJ"/>
+                            <constraint firstItem="dbV-Eu-hJB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pfj-ue-NOX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="homeLabel" destination="dEu-zh-UMz" id="dpf-PV-mqf"/>
+                        <outlet property="mapView" destination="AeC-nK-4kc" id="TwM-2g-h2K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="136.14130434782609"/>
+        </scene>
+    </scenes>
+</document>
