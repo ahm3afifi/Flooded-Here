@@ -1,99 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flooded_Here" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Flooded_Here" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AeC-nK-4kc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nj9-WJ-dPM" customClass="GradientView" customModule="Flooded_Here" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="ApQ-Dt-a7e"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-Eu-hJB" customClass="SearchView" customModule="Flooded_Here" customModuleProvider="target">
-                                <rect key="frame" x="20" y="94" width="374" height="50"/>
+                                <rect key="frame" x="20" y="93" width="374" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="trD-Uz-Hf2">
-                                        <rect key="frame" x="25" y="5" width="324" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="uq7-La-gp6"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Location" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="trD-Uz-Hf2">
+                                        <rect key="frame" x="18" y="4" width="340" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="trD-Uz-Hf2" secondAttribute="trailing" constant="25" id="9I5-zT-gJu"/>
-                                    <constraint firstItem="trD-Uz-Hf2" firstAttribute="leading" secondItem="dbV-Eu-hJB" secondAttribute="leading" constant="25" id="AmH-JM-MLo"/>
-                                    <constraint firstAttribute="height" constant="50" id="bPF-Vc-0t0"/>
-                                    <constraint firstItem="trD-Uz-Hf2" firstAttribute="top" secondItem="dbV-Eu-hJB" secondAttribute="top" constant="5" id="xbS-zB-9nH"/>
+                                    <constraint firstAttribute="height" constant="50" id="8hE-hg-Ipk"/>
+                                    <constraint firstAttribute="bottom" secondItem="trD-Uz-Hf2" secondAttribute="bottom" constant="4" id="CqE-wD-Jaq"/>
+                                    <constraint firstAttribute="trailing" secondItem="trD-Uz-Hf2" secondAttribute="trailing" constant="16" id="GxQ-ma-V6F"/>
+                                    <constraint firstItem="trD-Uz-Hf2" firstAttribute="top" secondItem="dbV-Eu-hJB" secondAttribute="top" constant="4" id="IGQ-mD-vCZ"/>
+                                    <constraint firstItem="trD-Uz-Hf2" firstAttribute="leading" secondItem="dbV-Eu-hJB" secondAttribute="leading" constant="18" id="y3p-Sc-MIe"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alY-cn-vti" customClass="RoundedShadowButton" customModule="Flooded_Here" customModuleProvider="target">
-                                <rect key="frame" x="20" y="788" width="374" height="50"/>
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="O5i-IK-d79"/>
+                                    <constraint firstAttribute="height" constant="50" id="QTG-oj-c1V"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
                                 <state key="normal" title="Add Flood">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="addFloodButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypX-aS-rC7"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flooded Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEu-zh-UMz">
-                                <rect key="frame" x="140.66666666666666" y="55" width="132.99999999999997" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="133" id="RaJ-eS-F4E"/>
-                                    <constraint firstAttribute="height" constant="28" id="TEv-wR-6l0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="alY-cn-vti" secondAttribute="bottom" constant="24" id="CfR-PH-ca9"/>
-                            <constraint firstItem="dEu-zh-UMz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="K2D-Yh-sFh"/>
-                            <constraint firstItem="nj9-WJ-dPM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kc5-5T-ITe"/>
-                            <constraint firstItem="nj9-WJ-dPM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MTh-6j-gZq"/>
-                            <constraint firstAttribute="bottom" secondItem="AeC-nK-4kc" secondAttribute="bottom" id="OIJ-UV-93u"/>
-                            <constraint firstItem="dbV-Eu-hJB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="QsA-c3-b9u"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="alY-cn-vti" secondAttribute="trailing" constant="20" id="RA5-P9-cVd"/>
-                            <constraint firstItem="dbV-Eu-hJB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SnM-nt-fLb"/>
-                            <constraint firstItem="nj9-WJ-dPM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZoD-RA-KHS"/>
-                            <constraint firstItem="AeC-nK-4kc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bmX-oA-XWQ"/>
-                            <constraint firstItem="alY-cn-vti" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j95-kD-4sU"/>
-                            <constraint firstItem="dEu-zh-UMz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lJz-Zd-KUK"/>
-                            <constraint firstItem="alY-cn-vti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pJH-cz-JWJ"/>
-                            <constraint firstItem="dbV-Eu-hJB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pfj-ue-NOX"/>
-                            <constraint firstItem="AeC-nK-4kc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rud-RN-amS"/>
-                            <constraint firstItem="AeC-nK-4kc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wVv-kx-cya"/>
+                            <constraint firstItem="AeC-nK-4kc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2ay-a3-IgZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="alY-cn-vti" secondAttribute="trailing" constant="20" id="HRk-no-bpc"/>
+                            <constraint firstItem="alY-cn-vti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cky-Dp-jOR"/>
+                            <constraint firstAttribute="bottom" secondItem="AeC-nK-4kc" secondAttribute="bottom" id="lmw-QM-WUf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dbV-Eu-hJB" secondAttribute="trailing" constant="20" id="lqW-pb-0u4"/>
+                            <constraint firstItem="dbV-Eu-hJB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="p89-vy-Cez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="alY-cn-vti" secondAttribute="bottom" constant="20" id="qUI-1G-LWC"/>
+                            <constraint firstItem="AeC-nK-4kc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tRG-xx-WTx"/>
+                            <constraint firstItem="dbV-Eu-hJB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ucR-0P-rFA"/>
+                            <constraint firstItem="AeC-nK-4kc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="x7i-ws-DAx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="homeScreenLabel" destination="dEu-zh-UMz" id="dpf-PV-mqf"/>
+                        <outlet property="addFloodButton" destination="alY-cn-vti" id="vl1-Dc-Tl0"/>
                         <outlet property="mapView" destination="AeC-nK-4kc" id="TwM-2g-h2K"/>
+                        <outlet property="searchLocationTextField" destination="trD-Uz-Hf2" id="Cdq-cO-GZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
+            <point key="canvasLocation" x="-326.08695652173918" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>

@@ -3,35 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760D7C59239998DF00B8E67C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 760D7C58239998DF00B8E67C /* GoogleService-Info.plist */; };
 		767A00312364A819007317DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A00302364A819007317DB /* AppDelegate.swift */; };
-		767A00332364A819007317DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A00322364A819007317DB /* SceneDelegate.swift */; };
-		767A00352364A819007317DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A00342364A819007317DB /* ViewController.swift */; };
+		767A00352364A819007317DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A00342364A819007317DB /* HomeViewController.swift */; };
 		767A00382364A819007317DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767A00362364A819007317DB /* Main.storyboard */; };
 		767A003A2364A81B007317DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767A00392364A81B007317DB /* Assets.xcassets */; };
 		767A003D2364A81B007317DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767A003B2364A81B007317DB /* LaunchScreen.storyboard */; };
-		767A00462364B824007317DB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767A00452364B824007317DB /* MapKit.framework */; };
+		768944D72370D00600F7CCDC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768944D32370CF9400F7CCDC /* CoreLocation.framework */; };
+		768944DA2370D00800F7CCDC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767A00452364B824007317DB /* MapKit.framework */; };
 		76FF77452365B85D00DEA5D2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF77442365B85D00DEA5D2 /* GradientView.swift */; };
 		76FF774723661C6F00DEA5D2 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF774623661C6F00DEA5D2 /* RoundedShadowButton.swift */; };
 		76FF774923661FB100DEA5D2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF774823661FB100DEA5D2 /* SearchView.swift */; };
+		7BAB73CFCDC7B3597D8E33DC /* Pods_Flooded_Here.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C1B2B31AE6BC87EC95BC48 /* Pods_Flooded_Here.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EC628E9FFF2DA17496A4D96 /* Pods-Flooded Here.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flooded Here.release.xcconfig"; path = "Target Support Files/Pods-Flooded Here/Pods-Flooded Here.release.xcconfig"; sourceTree = "<group>"; };
+		760D7C58239998DF00B8E67C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		767A002D2364A819007317DB /* Flooded Here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flooded Here.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		767A00302364A819007317DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		767A00322364A819007317DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		767A00342364A819007317DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		767A00342364A819007317DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		767A00372364A819007317DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		767A00392364A81B007317DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		767A003C2364A81B007317DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		767A003E2364A81B007317DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		767A00452364B824007317DB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		768944D32370CF9400F7CCDC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		76FF77442365B85D00DEA5D2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		76FF774623661C6F00DEA5D2 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		76FF774823661FB100DEA5D2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		95C1B2B31AE6BC87EC95BC48 /* Pods_Flooded_Here.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flooded_Here.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4C225AD39C3C6435D94BF6 /* Pods-Flooded Here.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flooded Here.debug.xcconfig"; path = "Target Support Files/Pods-Flooded Here/Pods-Flooded Here.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				767A00462364B824007317DB /* MapKit.framework in Frameworks */,
+				768944DA2370D00800F7CCDC /* MapKit.framework in Frameworks */,
+				768944D72370D00600F7CCDC /* CoreLocation.framework in Frameworks */,
+				7BAB73CFCDC7B3597D8E33DC /* Pods_Flooded_Here.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +60,7 @@
 				767A002F2364A819007317DB /* Flooded Here */,
 				767A002E2364A819007317DB /* Products */,
 				767A00442364B824007317DB /* Frameworks */,
+				EBEF16E452B3BAA53193E9B3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,15 +76,15 @@
 			isa = PBXGroup;
 			children = (
 				767A00302364A819007317DB /* AppDelegate.swift */,
-				767A00322364A819007317DB /* SceneDelegate.swift */,
-				767A00342364A819007317DB /* ViewController.swift */,
+				767A00342364A819007317DB /* HomeViewController.swift */,
 				767A00362364A819007317DB /* Main.storyboard */,
 				767A00392364A81B007317DB /* Assets.xcassets */,
 				767A003B2364A81B007317DB /* LaunchScreen.storyboard */,
-				767A003E2364A81B007317DB /* Info.plist */,
 				76FF77442365B85D00DEA5D2 /* GradientView.swift */,
 				76FF774623661C6F00DEA5D2 /* RoundedShadowButton.swift */,
 				76FF774823661FB100DEA5D2 /* SearchView.swift */,
+				767A003E2364A81B007317DB /* Info.plist */,
+				760D7C58239998DF00B8E67C /* GoogleService-Info.plist */,
 			);
 			path = "Flooded Here";
 			sourceTree = "<group>";
@@ -83,9 +92,21 @@
 		767A00442364B824007317DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				768944D32370CF9400F7CCDC /* CoreLocation.framework */,
 				767A00452364B824007317DB /* MapKit.framework */,
+				95C1B2B31AE6BC87EC95BC48 /* Pods_Flooded_Here.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBEF16E452B3BAA53193E9B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC4C225AD39C3C6435D94BF6 /* Pods-Flooded Here.debug.xcconfig */,
+				4EC628E9FFF2DA17496A4D96 /* Pods-Flooded Here.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 767A00412364A81B007317DB /* Build configuration list for PBXNativeTarget "Flooded Here" */;
 			buildPhases = (
+				AC9FF6C3F1D5A27685512259 /* [CP] Check Pods Manifest.lock */,
 				767A00292364A819007317DB /* Sources */,
 				767A002A2364A819007317DB /* Frameworks */,
 				767A002B2364A819007317DB /* Resources */,
+				983A1E3DE4D2C7A801AA241A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,7 +147,7 @@
 				};
 			};
 			buildConfigurationList = 767A00282364A819007317DB /* Build configuration list for PBXProject "Flooded Here" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -147,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				767A003D2364A81B007317DB /* LaunchScreen.storyboard in Resources */,
+				760D7C59239998DF00B8E67C /* GoogleService-Info.plist in Resources */,
 				767A003A2364A81B007317DB /* Assets.xcassets in Resources */,
 				767A00382364A819007317DB /* Main.storyboard in Resources */,
 			);
@@ -154,17 +178,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		983A1E3DE4D2C7A801AA241A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flooded Here/Pods-Flooded Here-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flooded Here/Pods-Flooded Here-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flooded Here/Pods-Flooded Here-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC9FF6C3F1D5A27685512259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flooded Here-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		767A00292364A819007317DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				767A00352364A819007317DB /* ViewController.swift in Sources */,
+				767A00352364A819007317DB /* HomeViewController.swift in Sources */,
 				76FF774723661C6F00DEA5D2 /* RoundedShadowButton.swift in Sources */,
 				767A00312364A819007317DB /* AppDelegate.swift in Sources */,
 				76FF77452365B85D00DEA5D2 /* GradientView.swift in Sources */,
 				76FF774923661FB100DEA5D2 /* SearchView.swift in Sources */,
-				767A00332364A819007317DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -294,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -306,11 +371,14 @@
 		};
 		767A00422364A81B007317DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4C225AD39C3C6435D94BF6 /* Pods-Flooded Here.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 68NL7XQ986;
 				INFOPLIST_FILE = "Flooded Here/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,17 +386,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AhmedAfifi.Flooded-Here";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		767A00432364A81B007317DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC628E9FFF2DA17496A4D96 /* Pods-Flooded Here.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 68NL7XQ986;
 				INFOPLIST_FILE = "Flooded Here/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AhmedAfifi.Flooded-Here";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
