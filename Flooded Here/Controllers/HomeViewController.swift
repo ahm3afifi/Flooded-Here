@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Flooded Here
 //
 //  Created by Ahmed Afifi on 10/26/19.
@@ -14,13 +14,22 @@ import Firebase
 class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var homeScreenLabel: UILabel!
+//    @IBOutlet weak var homeScreenLabel: UILabel!
     @IBOutlet weak var addFloodButton: RoundedShadowButton!
     @IBOutlet weak var searchLocationTextField: UITextField!
     
-    var matchingItems: [MKMapItem] = [MKMapItem]()
+    private var documentRef: DocumentReference!
     
+    private(set) var floods = [Flood]()
+    
+    var matchingItems: [MKMapItem] = [MKMapItem]()
     var tableView = UITableView()
+    
+    private lazy var dataBase: Firestore = {
+       
+        let firestoreDB = Firestore.firestore()
+        return firestoreDB
+    }()
     
     private lazy var locationManager: CLLocationManager = {
         
@@ -40,6 +49,53 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         self.mapView.delegate = self
         
         searchLocationTextField.delegate = self
+        
+        configureObservers()
+        
+    }
+    
+    private func updateAnnotations() {
+        
+        DispatchQueue.main.async {
+            self.floods.forEach {
+                self.addFloodToMap($0)
+            }
+        }
+        
+    }
+    
+    // fetching data from firebase database
+    private func configureObservers() {
+        
+        self.dataBase.collection("flooded-regions").addSnapshotListener { [weak self] snapshot, error in
+            
+            guard let snapshot = snapshot,
+                error == nil else {
+                    print("Error fetching document")
+                    return
+            }
+            
+            snapshot.documentChanges.forEach { diff in
+                
+                if diff.type == .added {
+                    if let flood = Flood(diff.document) {
+                        self?.floods.append(flood)
+                        self?.updateAnnotations()
+                    }
+                    
+                } else if diff.type == .removed {
+                    if let flood = Flood(diff.document) {
+                        if let floods = self?.floods {
+                            self?.floods = floods.filter { $0.documentId !=
+                                flood.documentId }
+                            self?.updateAnnotations()
+                            
+                        }
+                    }
+                }
+            }
+            
+        }
         
     }
     
@@ -76,18 +132,59 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     @IBAction func addFloodButtonPressed() {
         
+        saveFloodToFirebase()
+        print("add Flood Button Pressed")
+        
+    }
+    
+    private func addFloodToMap(_ flood: Flood) {
+        
+        let annotation = FloodAnotations(flood)
+        annotation.coordinate = CLLocationCoordinate2D(latitude: flood.latitude, longitude: flood.longitude)
+        annotation.title = "Flooded"
+        annotation.subtitle = flood.reportedDate.formatAsString()
+        self.mapView.addAnnotation(annotation)
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "FloodAnnotationView")
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "FloodAnnotationView")
+            annotationView?.canShowCallout = true
+            annotationView?.image = UIImage(named: "flood-annotation")
+            annotationView?.rightCalloutAccessoryView = UIButton.buttonForRightAccessoryView()
+            
+        }
+        
+        return annotationView
+        
+    }
+    
+    private func saveFloodToFirebase() {
+        
         guard let location = self.locationManager.location else {
             return
         }
         
-        let annotation = MKPointAnnotation()
-        annotation.title = "Flooded"
-        annotation.subtitle = "Reported on 29/10/2019 2:39 PM"
-        annotation.coordinate = location.coordinate
+        var flood = Flood(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         
-        self.mapView.addAnnotation(annotation)
-        
-        print("add Flood Button Pressed")
+        self.documentRef = self.dataBase.collection("flooded-regions").addDocument(data: flood.toDictionary()) {
+            [weak self] error in
+            
+            if let error = error {
+                print(error)
+            } else {
+                flood.documentId = self?.documentRef.documentID
+                self?.addFloodToMap(flood)
+            }
+        }
         
     }
     
